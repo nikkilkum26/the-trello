@@ -1,0 +1,9 @@
+.workspace{
+    display: flex;
+    flex-direction: column;
+    max-width: 150px; 
+    border: 1px solid rgb(133, 128, 128);
+    border-radius: 5px;
+    text-align: center;
+
+}
