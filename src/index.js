@@ -7,7 +7,7 @@ import { Provider } from "react-redux";
 import Store from "./Store";
 import { toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 toast.configure({
   autoClose: 1500,
 });
