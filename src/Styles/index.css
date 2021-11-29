@@ -1,16 +1,19 @@
-body{
-background-color:rgba(214, 205, 205, 0.692) !important ;
+body {
+  background-color: rgba(214, 205, 205, 0.692) !important ;
 }
-.add-card{
-    display: flex;
-    justify-content: space-evenly;
+.add-card {
+  display: flex;
+  justify-content: space-evenly;
 }
-#card-name-input{
-    width: 50% !important;
+#card-name-input {
+  max-width: 70% !important;
 }
-.cardlist{
-    border:1px solid #ced4da;
+.cardlist {
+  border: 1px solid #ced4da;
 }
-#mycard{
-    max-width: 300px;
+#mycard {
+  max-width: 300px;
+}
+#create-card {
+  height: fit-content;
 }
