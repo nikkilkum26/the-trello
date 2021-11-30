@@ -13,7 +13,7 @@ body {
 }
 #mycard {
   max-width: 300px;
-  height: fit-content;
+  /* height: fit-content; */
 }
 #create-card {
   height: fit-content;

@@ -1,25 +1,25 @@
 {
   "workspace": [
     {
-      "title": "title2",
+      "title": "Tasks",
       "cardList": [
         {
-          "name": "hi",
+          "name": "Learn Angular",
           "id": "e83afc1b-3235-4b4f-b8a1-05f6846bb936"
         },
         {
-          "name": "hiiii",
+          "name": "Finish Sass",
           "id": "87563949-5975-4c41-8049-db7038659e93"
         }
       ],
       "id": 1
     },
     {
-      "title": "title3",
+      "title": "Free Time",
       "cardList": [
         {
-          "name": "hi",
-          "id": "e83afc1b-3235-4b4f-b8a1-05f6846bb936"
+          "name": "Play chess",
+          "id": "e83afc1b-3235-4b4f-b8a1-05f6846bb0036"
         }
       ],
       "id": 2

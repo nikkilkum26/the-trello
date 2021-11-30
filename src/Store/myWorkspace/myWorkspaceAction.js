@@ -30,7 +30,9 @@ export const deleteCard = (id, item, data) => async (dispatch) => {
   data[id].cardList.splice(item, 1);
 
   try {
-    // await axios.post(`http://localhost:4000/workspace/`, data);
+    // await axios.delete(
+    //   `http://localhost:4000/workspace/${id}/cardList/${item}`
+    // );
     dispatch({
       type: myWorkspaceActionTypes.DELETE_CARD,
       payload: data,
@@ -59,8 +61,7 @@ export const workSpace = (workspace, data) => async (dispatch) => {
 };
 
 export const deleteWorkSpace = (data, workspace, id) => async (dispatch) => {
-  data.splice(id, 1);
-
+  data.splice(id - 1, 1);
   dispatch({
     type: myWorkspaceActionTypes.GET_WORKSPACE_DATA,
     payload: data,
