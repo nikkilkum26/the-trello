@@ -22,7 +22,10 @@ const myWorkspaceReducer = (
           work.id === payload.id
             ? {
                 ...work,
-                cardList: [...work.cardList, payload.newCard],
+                cardList: [
+                  ...work.cardList,
+                  { id: payload.uuid, name: payload.newCard },
+                ],
               }
             : work
         ),

@@ -9,29 +9,36 @@ export const getWorkSpace = () => async (dispatch) => {
       type: myWorkspaceActionTypes.GET_WORKSPACE_DATA,
       payload: getData.data,
     });
+    toast.success("Welcome!");
   } catch (error) {
     toast.error(error.message);
   }
 };
 
-export const insertCard = (id, newCard) => async (dispatch) => {
-  try {
-    dispatch({
-      type: myWorkspaceActionTypes.ADD_CARD,
-      payload: { id, newCard },
-    });
-  } catch (err) {}
-};
+export const insertCard =
+  (id, newCard, uuid, workSpaceData) => async (dispatch) => {
+    try {
+      dispatch({
+        type: myWorkspaceActionTypes.ADD_CARD,
+        payload: { id, newCard, uuid },
+      });
+      toast.success("Card Created Successfully!");
+    } catch (err) {}
+  };
 
 export const deleteCard = (id, item, data) => async (dispatch) => {
   data[id].cardList.splice(item, 1);
 
   try {
+    // await axios.post(`http://localhost:4000/workspace/`, data);
     dispatch({
       type: myWorkspaceActionTypes.DELETE_CARD,
       payload: data,
     });
-  } catch (err) {}
+    toast.success("Deleted Successfully!");
+  } catch (err) {
+    toast.error(err.message);
+  }
 };
 
 export const workSpace = (workspace, data) => async (dispatch) => {
@@ -47,5 +54,16 @@ export const workSpace = (workspace, data) => async (dispatch) => {
       type: myWorkspaceActionTypes.ADD_WORKSPACE_DATA,
       payload: data,
     });
+    toast.success("WorkSpace Created Successfully!");
   } catch (err) {}
+};
+
+export const deleteWorkSpace = (data, workspace, id) => async (dispatch) => {
+  data.splice(id, 1);
+
+  dispatch({
+    type: myWorkspaceActionTypes.GET_WORKSPACE_DATA,
+    payload: data,
+  });
+  toast.success("WorkSpace Deleted Successfully!");
 };

@@ -1,15 +1,28 @@
 {
-    "workspace":[
+  "workspace": [
+    {
+      "title": "title2",
+      "cardList": [
         {
-            "title":"title",
-            "cardList":["hi","hellollolloooo"],
-            "id":1
+          "name": "hi",
+          "id": "e83afc1b-3235-4b4f-b8a1-05f6846bb936"
         },
         {
-            "title":"title2",
-            "cardList":["hi","hello"],
-            "id":2
+          "name": "hiiii",
+          "id": "87563949-5975-4c41-8049-db7038659e93"
         }
-    ]
-
+      ],
+      "id": 1
+    },
+    {
+      "title": "title3",
+      "cardList": [
+        {
+          "name": "hi",
+          "id": "e83afc1b-3235-4b4f-b8a1-05f6846bb936"
+        }
+      ],
+      "id": 2
+    }
+  ]
 }
