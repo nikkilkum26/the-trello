@@ -68,3 +68,10 @@ export const deleteWorkSpace = (data, workspace, id) => async (dispatch) => {
   });
   toast.success("WorkSpace Deleted Successfully!");
 };
+
+export const dragChangesAction = (data) => async (dispatch) => {
+  dispatch({
+    type: myWorkspaceActionTypes.GET_WORKSPACE_DATA,
+    payload: data,
+  });
+};

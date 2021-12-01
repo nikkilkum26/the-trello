@@ -11,7 +11,7 @@ const CreateNewWorkSpace = ({
       className="card shadow-sm p-3 mb-5 bg-body rounded text-center"
       id="create-card"
     >
-      <ul class="list-group list-group-flush">
+      <ul className="list-group list-group-flush">
         <li className="title list-group-item">
           <input
             className="form-control"

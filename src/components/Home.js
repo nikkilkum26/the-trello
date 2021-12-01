@@ -6,6 +6,7 @@ import {
   deleteCard,
   workSpace,
   deleteWorkSpace,
+  dragChangesAction,
 } from "../Store/myWorkspace/myWorkspaceAction";
 import { v4 } from "uuid";
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
@@ -45,6 +46,7 @@ const Home = () => {
   };
 
   const handleDragEnd = ({ destination, source }) => {
+    console.log(destination, source, "destination source");
     if (!destination) {
       return;
     }
@@ -67,7 +69,7 @@ const Home = () => {
         0,
         itemCopy
       );
-
+      dispatch(dragChangesAction(prev));
       return prev;
     });
   };
@@ -109,16 +111,14 @@ const Home = () => {
                 )}
               </Droppable>
             </ul>
-            <>
-              <CreateNewCard
-                setNewCard={setNewCard}
-                createCard={createCard}
-                deleteworkspace={deleteworkspace}
-                idx={idx + 1}
-                cardRef={cardRef}
-                workspace={workspace}
-              />
-            </>
+            <CreateNewCard
+              setNewCard={setNewCard}
+              createCard={createCard}
+              deleteworkspace={deleteworkspace}
+              idx={idx + 1}
+              cardRef={cardRef}
+              workspace={workspace}
+            />
           </div>
         ))}
       </DragDropContext>

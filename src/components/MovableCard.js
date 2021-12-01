@@ -3,7 +3,7 @@ import React from "react";
 const MovableCard = ({ provided, eachCard, cardId, removeCardItem, idx }) => {
   return (
     <div
-      className="d-flex justify-content-between "
+      className="d-flex justify-content-between border border-white flex-row"
       ref={provided.innerRef}
       {...provided.draggableProps}
       {...provided.dragHandleProps}
